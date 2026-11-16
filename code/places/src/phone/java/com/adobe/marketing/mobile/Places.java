@@ -76,6 +76,7 @@ public class Places {
             final int limit,
             @NonNull final AdobeCallback<List<PlacesPOI>> successCallback,
             @NonNull final AdobeCallback<PlacesRequestError> errorCallback) {
+        final String telemetryOp = com.adobe.marketing.mobile.telemetrybridge.TelemetryBridge.operationStarted("com.adobe.places", "sdk.places.getNearbyPointsOfInterest");
         getNearbyPointsOfInterestInternal(location, limit, successCallback, errorCallback);
     }
 
